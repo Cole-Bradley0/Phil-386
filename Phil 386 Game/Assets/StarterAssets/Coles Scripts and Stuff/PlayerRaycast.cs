@@ -17,10 +17,12 @@ public class PlayerRaycast : MonoBehaviour
             if(hit.transform.tag == "Computer")
             {
                 lookingAtComputer = true;
+                
             }
             else
             {
                 lookingAtComputer = false;
+                
             }
         }
         else

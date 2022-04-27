@@ -5,10 +5,10 @@ using UnityEngine;
 public class ShopScript : MonoBehaviour
 {
     public Canvas GameCanvas;
+   
     // Start is called before the first frame update
     void Start()
-    {
-        
+    { 
     }
 
     // Update is called once per frame
