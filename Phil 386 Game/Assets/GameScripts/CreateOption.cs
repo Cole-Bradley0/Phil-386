@@ -95,7 +95,7 @@ public class CreateOption : MonoBehaviour
      
         while (true){
             //for (int i = 0; i < 3; i++) CreateUi();
-           WaitForSeconds wait = new WaitForSeconds(Random.Range(7f,12f));
+           WaitForSeconds wait = new WaitForSeconds(Random.Range(1f,2f));
             
             yield return wait;
              CreateUi();
