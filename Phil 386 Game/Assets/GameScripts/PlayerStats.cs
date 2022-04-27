@@ -13,7 +13,7 @@ public class PlayerStats : MonoBehaviour
     public int Money;
     public int Reputation;
     public Text Comment;
-    public string[] comments = {"Test"};
+    private string[] comments = {"Cringe","Based shit","Neckbeard","Lmao","Poopy head","Coc","Xqc"};
 
     void Start(){
             StartCoroutine(createObjects());

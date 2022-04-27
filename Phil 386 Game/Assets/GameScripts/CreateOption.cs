@@ -22,7 +22,7 @@ public class CreateOption : MonoBehaviour
          string RepText;
         string MoneyText;
         
-        string[] Actions = {"Ejiofsea"};
+        string[] Actions = {"Cringe","Based shit","Neckbeard","Test","Lmao","Poopy head","Coc","Xqc"};
             
         GameObject clone = Instantiate(CloneObject);
              Rep = 0;
@@ -95,7 +95,7 @@ public class CreateOption : MonoBehaviour
      
         while (true){
             //for (int i = 0; i < 3; i++) CreateUi();
-           WaitForSeconds wait = new WaitForSeconds(Random.Range(1f,2f));
+           WaitForSeconds wait = new WaitForSeconds(Random.Range(7f,12f));
             
             yield return wait;
              CreateUi();
