@@ -12,6 +12,12 @@ public class PlayerStats : MonoBehaviour
     public Image ReputationGui;
     public int Money;
     public int Reputation;
+    public Text Comment;
+    public string[] comments = {"Test"};
+
+    void Start(){
+            StartCoroutine(createObjects());
+    }
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +28,21 @@ public class PlayerStats : MonoBehaviour
         if (Reputation < 0){
             Reputation = 0;
         }
-        ReputationGui.rectTransform.sizeDelta = new Vector2(Reputation,50);
+      
+    }
+    void CreateComment(){
+        
+        Comment.text = comments[Random.Range(0,comments.Length-1)];
+    }
+    private IEnumerator createObjects(){
+
+     
+        while (true){
+            //for (int i = 0; i < 3; i++) CreateUi();
+           WaitForSeconds wait = new WaitForSeconds(Random.Range(7f,12f));
+            
+            yield return wait;
+             CreateComment();
+        }
     }
 }

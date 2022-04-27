@@ -64,7 +64,7 @@ public class CreateOption : MonoBehaviour
         }
        
         
-        clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = "test";
+        clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = Actions[Random.Range(0,Actions.Length-1)];
         if (Rep < 0){
             clone.transform.GetChild(1).gameObject.GetComponent<Text>().color = new Color32(255,0,0,255);
         }
