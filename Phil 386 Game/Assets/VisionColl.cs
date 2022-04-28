@@ -15,13 +15,10 @@ public class VisionColl : MonoBehaviour
     {
         
     }
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        foreach (ContactPoint contact in collision.contacts)
-        {
-            print(collision);
-            Debug.DrawRay(contact.point, contact.normal, Color.white);
-        }
+        print(other);
+      
        
     }
 }
