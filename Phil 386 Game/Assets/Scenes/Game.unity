@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19968498, g: 0.29936957, b: 0.22068766, a: 1}
+  m_IndirectSpecularColor: {r: 0.29936957, g: 0.29936957, b: 0.29936957, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1627,6 +1627,7 @@ GameObject:
   - component: {fileID: 644442335}
   - component: {fileID: 644442334}
   - component: {fileID: 644442337}
+  - component: {fileID: 644442338}
   m_Layer: 0
   m_Name: Cube (16)
   m_TagString: Untagged
@@ -1745,6 +1746,23 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &644442338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644442332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113a3031a67500f46a76dc0cac5820c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 644442337}
+  videoClips:
+  - {fileID: 32900000, guid: e9752e42cd61f1040ba856e65c57ead7, type: 3}
+  - {fileID: 32900000, guid: d6a89b05ae62f6d4584035b74cd2cd94, type: 3}
+  - {fileID: 32900000, guid: 7a58113477d5e7746b6b83a4fa400c98, type: 3}
 --- !u!1 &660548712
 GameObject:
   m_ObjectHideFlags: 0
