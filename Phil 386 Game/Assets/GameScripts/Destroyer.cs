@@ -12,7 +12,7 @@ public class Destroyer : MonoBehaviour
     // Start is called before the first frame update
     public void Test(){
        var script = Player.GetComponent<PlayerStats>();
-         var gameLoop = gameloop.GetComponent<PlayerGameLoop>();
+        var gameLoop = gameloop.GetComponent<PlayerGameLoop>();
         gameLoop.actions--;
         script.Money += money;
         script.Reputation += rep;
@@ -30,7 +30,6 @@ public class Destroyer : MonoBehaviour
     }
     public void delete(){
         Destroy(destroyed);
-        
 
     }
     private IEnumerator deleter(){
