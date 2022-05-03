@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using StarterAssets;
+
 
 public class PlayerGameLoop : MonoBehaviour
 {
@@ -9,13 +9,11 @@ public class PlayerGameLoop : MonoBehaviour
     private bool showInventory;
     public Canvas ECanvas;
     public PlayerRaycast raycastScript;
-    public FirstPersonController movementScript;
 
     // Start is called before the first frame update
     void Start()
     {
         showInventory = false;
-      
     }
 
     // Update is called once per frame
@@ -24,11 +22,11 @@ public class PlayerGameLoop : MonoBehaviour
     
         
         if (raycastScript.lookingAtComputer){
-
+            
                    ECanvas.enabled = true;
                   if (Input.GetKeyDown(KeyCode.E))
         {
-            movementScript.enabled = false;
+        
             showInventory = !showInventory;
             if (showInventory)
             {
@@ -37,7 +35,6 @@ public class PlayerGameLoop : MonoBehaviour
                 GameCanvas.enabled = true;
             } else
             {
-                movementScript.enabled = true;
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 GameCanvas.enabled = false;
@@ -45,7 +42,6 @@ public class PlayerGameLoop : MonoBehaviour
 
         }
         }else{
-              
               ECanvas.enabled = false;
 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
