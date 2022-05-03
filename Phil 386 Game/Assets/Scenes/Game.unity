@@ -1737,7 +1737,7 @@ VideoPlayer:
   - 1
   m_Url: 
   m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
+  m_DirectAudioMutes: 01
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
@@ -2305,7 +2305,7 @@ GameObject:
   - component: {fileID: 978746361}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Bed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6502,6 +6502,7 @@ MonoBehaviour:
   interactionText: {fileID: 1957952051}
   lookingAtComputer: 0
   raycastLength: 1.6
+  lookingAtBed: 0
 --- !u!114 &8024504198401551009
 MonoBehaviour:
   m_ObjectHideFlags: 0
