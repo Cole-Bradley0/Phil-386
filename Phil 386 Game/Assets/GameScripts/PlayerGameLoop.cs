@@ -22,7 +22,6 @@ public class PlayerGameLoop : MonoBehaviour
           actions = 5;
         day = 0;
         showInventory = false;
-      
     }
 
     // Update is called once per frame
@@ -35,11 +34,11 @@ public class PlayerGameLoop : MonoBehaviour
             actions = 5;
         }
         if (raycastScript.lookingAtComputer){
-
+            
                    ECanvas.enabled = true;
                   if (Input.GetKeyDown(KeyCode.E))
         {
-            movementScript.enabled = false;
+        
             showInventory = !showInventory;
             if (showInventory)
             {
@@ -48,7 +47,6 @@ public class PlayerGameLoop : MonoBehaviour
                 GameCanvas.enabled = true;
             } else
             {
-                movementScript.enabled = true;
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 GameCanvas.enabled = false;
@@ -56,7 +54,6 @@ public class PlayerGameLoop : MonoBehaviour
 
         }
         }else{
-              
               ECanvas.enabled = false;
 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;

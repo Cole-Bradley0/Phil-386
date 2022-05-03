@@ -23,7 +23,7 @@ public class CreateOption : MonoBehaviour
          string RepText;
         string MoneyText;
         
-        string[] Actions = {"Cringe","Based shit","Neckbeard","Test","Lmao","Poopy head","Coc","Xqc"};
+        string[] Actions = {"Ejiofsea"};
             
         GameObject clone = Instantiate(CloneObject);
              Rep = 0;
@@ -65,7 +65,7 @@ public class CreateOption : MonoBehaviour
         }
        
         
-        clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = Actions[Random.Range(0,Actions.Length-1)];
+        clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = "test";
         if (Rep < 0){
             clone.transform.GetChild(1).gameObject.GetComponent<Text>().color = new Color32(255,0,0,255);
         }
