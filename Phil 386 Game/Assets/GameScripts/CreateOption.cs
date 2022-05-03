@@ -8,16 +8,17 @@ public class CreateOption : MonoBehaviour
     public GameObject CloneDestination;
     private int Rep;
     private int Money;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-        
-            StartCoroutine(createObjects());
+
+       
+        StartCoroutine(createObjects());
             
     }
 
-
+    
     public void CreateUi(){
          string RepText;
         string MoneyText;
