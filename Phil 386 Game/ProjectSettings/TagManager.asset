@@ -8,6 +8,7 @@ TagManager:
   - Computer
   - Bag
   - Bed
+  - Shop
   layers:
   - Default
   - TransparentFX
