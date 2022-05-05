@@ -6,35 +6,24 @@ public class PlayerRaycast : MonoBehaviour
 {
     public LayerMask layers;
     public GameObject interactionText;
-    public bool lookingAtComputer;
+ 
     public float raycastLength = 5f;
-    public bool lookingAtShop;
+  
+    public bool lookingAtSomething;
+    public string tag;
     void Update()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, raycastLength, layers))
         {
-            if (hit.transform.tag == "Shop"){
-                lookingAtShop = true;
-            }
-            else{
-                lookingAtShop = false;
-            }
-            if(hit.transform.tag == "Computer")
-            {
-                lookingAtComputer = true;
-                
-            }
-            else
-            {
-                lookingAtComputer = false;
-                
-            }
+                tag = hit.transform.tag;
+                lookingAtSomething = true;
+            
+   
+
         }
-        else
-        {
-            lookingAtShop = false;
-            lookingAtComputer = false;
+        else{
+            lookingAtSomething = false;
         }
     }
 }

@@ -5,7 +5,10 @@ using UnityEngine;
 public class ShopScript : MonoBehaviour
 {
     public Canvas GameCanvas;
-   
+    public int repAdd;
+    public int moneyAdd;
+    public int repAddCost;
+    public int devHireCost;
     // Start is called before the first frame update
     void Start()
     { 
@@ -16,12 +19,10 @@ public class ShopScript : MonoBehaviour
     {
         
     }
-    public void openShop(){
-        if (GameCanvas.enabled == false){
-            GameCanvas.enabled = true;
-        }
-        else{
-            GameCanvas.enabled = false;
-        }
+    public void buyPR(){
+        
+    }
+    public void buyDev(){
+
     }
 }

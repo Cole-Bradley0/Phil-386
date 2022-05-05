@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class PlayerGameLoop : MonoBehaviour
 {
     public Canvas GameCanvas;
-    private bool showInventory;
-    private bool showShop;
+    private bool showGUI;
+   
     public Canvas ECanvas;
 
 
@@ -24,8 +24,7 @@ public class PlayerGameLoop : MonoBehaviour
     {
         day = 0;
         actions = 5;
-        showInventory = false;
-        showShop = false;
+        showGUI = false;
     }
 
     // Update is called once per frame
@@ -38,64 +37,48 @@ public class PlayerGameLoop : MonoBehaviour
             actions = 5;
         }
         
-        if (raycastScript.lookingAtComputer){
-            
+        if (raycastScript.lookingAtSomething){
+            if (raycastScript.tag != "Untagged"){
                    ECanvas.enabled = true;
                   if (Input.GetKeyDown(KeyCode.E))
         {
         
-            showInventory = !showInventory;
-            if (showInventory)
+            showGUI = !showGUI;
+            if (showGUI)
             {
+
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
-                GameCanvas.enabled = true;
+                switch(raycastScript.tag){
+                    case "Computer":
+                        GameCanvas.enabled = true;
+                        break;
+                    case "Shop":
+                        ShopCanvas.enabled = true;
+                        
+                        break;
+                }
+                
             } else
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 GameCanvas.enabled = false;
-            }        
-
-        }
-        }else{
-              ECanvas.enabled = false;
-Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-                GameCanvas.enabled = false;
-        }
-        
-
-
-
-if (raycastScript.lookingAtShop){
-            
-                   ECanvas.enabled = true;
-                  if (Input.GetKeyDown(KeyCode.E))
-        {
-        
-            showShop = !showShop;
-            if (showShop)
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                ShopCanvas.enabled = true;
-            } else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
                 ShopCanvas.enabled = false;
             }        
 
         }
         }else{
               ECanvas.enabled = false;
-Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+                GameCanvas.enabled = false;
                 ShopCanvas.enabled = false;
         }
-      
-    
+        }
+
+
+
     }
     
 }
