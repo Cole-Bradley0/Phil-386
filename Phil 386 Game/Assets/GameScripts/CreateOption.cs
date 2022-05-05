@@ -8,6 +8,7 @@ public class CreateOption : MonoBehaviour
     public GameObject CloneDestination;
     private int Rep;
     private int Money;
+    public ShopScript shopScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,21 +30,21 @@ public class CreateOption : MonoBehaviour
         Money = 0;
 
         if (Random.Range(0,4) == 0){
-            Rep = Random.Range(1,10);
-         Money = Random.Range(10,100);
+            Rep = Random.Range(1,10) + (int)shopScript.repAdd;
+         Money = Random.Range(10,100) + (int)shopScript.moneyAdd;
           clone.GetComponent<Image>().color = new Color32(0,255,0,100);
         }
         else {
              clone.GetComponent<Image>().color = new Color32(255,255,0,100);
           
             if (Random.Range(0,2) == 0){
-                Rep = Random.Range(-10,-1);
-         Money = Random.Range(10,100);
+                Rep = Random.Range(-10,-1) + (int)shopScript.repAdd;
+         Money = Random.Range(10,100) + (int)shopScript.moneyAdd;
 
             }
             else{
-                Rep = Random.Range(1,10);
-         Money = Random.Range(-100,-1);
+                Rep = Random.Range(1,10) + (int)shopScript.repAdd;
+         Money = Random.Range(-100,-1) + (int)shopScript.moneyAdd;
         
             }
         }
