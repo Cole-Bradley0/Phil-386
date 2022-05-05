@@ -11,7 +11,7 @@ public class ShopScript : MonoBehaviour
     public double devHireCost;
 
     public CreateOption playerScript;
-
+    public PlayerStats playerStats;
     public Text uxPR;
     public Text uxDevHire;
     // Start is called before the first frame update
@@ -27,13 +27,19 @@ public class ShopScript : MonoBehaviour
      uxDevHire.text = "Dev Hire Cost: $"+Mathf.Round((float)devHireCost);   
     }
     public void buyPR(){
+        if (playerStats.Money >= (int)repAddCost){
         playerScript.Money -= (int)repAddCost;
+        playerStats.Money -= (int)repAddCost;
         repAddCost = repAddCost * 1.2;
         repAdd = repAdd * 1.2;
+        }
     }
     public void buyDev(){
+        if (playerStats.Money >= (int)devHireCost){
         playerScript.Money -= (int)devHireCost;
+        playerStats.Money -= (int)devHireCost;
         devHireCost = devHireCost * 1.2;
         moneyAdd = moneyAdd * 1.2;
+        }
     }
 }

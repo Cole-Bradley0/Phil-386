@@ -3071,7 +3071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1139111.4, y: 673695.1}
+  m_AnchoredPosition: {x: -1165274.8, y: 687396.44}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1034621920
@@ -3675,6 +3675,7 @@ MonoBehaviour:
   repAddCost: 10
   devHireCost: 20
   playerScript: {fileID: 2070155860}
+  playerStats: {fileID: 3454197277912477631}
   uxPR: {fileID: 1113976777}
   uxDevHire: {fileID: 1494203053}
 --- !u!1 &1162502268
