@@ -8,7 +8,13 @@ public class PlayerGameLoop : MonoBehaviour
 {
     public Canvas GameCanvas;
     private bool showInventory;
+    private bool showShop;
     public Canvas ECanvas;
+
+
+
+    public Canvas ShopCanvas;
+
     public PlayerRaycast raycastScript;
     public int actions;
     public int day;
@@ -19,6 +25,7 @@ public class PlayerGameLoop : MonoBehaviour
         day = 0;
         actions = 5;
         showInventory = false;
+        showShop = false;
     }
 
     // Update is called once per frame
@@ -58,7 +65,37 @@ Cursor.lockState = CursorLockMode.Locked;
                 GameCanvas.enabled = false;
         }
         
-      
+
+
+
+if (raycastScript.lookingAtShop){
+            
+                   ECanvas.enabled = true;
+                  if (Input.GetKeyDown(KeyCode.E))
+        {
         
+            showShop = !showShop;
+            if (showShop)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                ShopCanvas.enabled = true;
+            } else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                ShopCanvas.enabled = false;
+            }        
+
+        }
+        }else{
+              ECanvas.enabled = false;
+Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                ShopCanvas.enabled = false;
+        }
+      
+    
     }
+    
 }
