@@ -27,10 +27,12 @@ public class ShopScript : MonoBehaviour
      uxDevHire.text = "Dev Hire Cost: $"+Mathf.Round((float)devHireCost);   
     }
     public void buyPR(){
+        playerScript.Money -= (int)repAddCost;
         repAddCost = repAddCost * 1.2;
         repAdd = repAdd * 1.2;
     }
     public void buyDev(){
+        playerScript.Money -= (int)devHireCost;
         devHireCost = devHireCost * 1.2;
         moneyAdd = moneyAdd * 1.2;
     }

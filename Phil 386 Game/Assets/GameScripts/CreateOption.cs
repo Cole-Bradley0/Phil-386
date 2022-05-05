@@ -6,8 +6,8 @@ public class CreateOption : MonoBehaviour
 {
     public GameObject CloneObject;
     public GameObject CloneDestination;
-    private int Rep;
-    private int Money;
+    public int Rep;
+    public int Money;
     public ShopScript shopScript;
     // Start is called before the first frame update
     void Start()
