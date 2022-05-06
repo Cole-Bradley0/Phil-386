@@ -12,7 +12,6 @@ public class ShopScript : MonoBehaviour
 
     public CreateOption playerScript;
     public PlayerStats playerStats;
-
     public Text uxPR;
     public Text uxDevHire;
     // Start is called before the first frame update
