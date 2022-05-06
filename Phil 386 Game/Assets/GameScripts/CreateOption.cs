@@ -23,26 +23,32 @@ public class CreateOption : MonoBehaviour
          string RepText;
         string MoneyText;
         
-        string[] Actions = {"Ejiofsea"};
+        string[] perfectActions = {"Make software better","Create a new feature"};
+        string[] goodActions = {"Less aggressive business model","Make app less addictive","Make TOS easier to read"};
+        string[] badActions = {"More aggressive business model","Make app more addictive","Make app harder to unsubscribe","Hack competitors"};
             
         GameObject clone = Instantiate(CloneObject);
              Rep = 0;
         Money = 0;
 
         if (Random.Range(0,4) == 0){
+             clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = perfectActions[Random.Range(0,perfectActions.Length-1)];
             Rep = Random.Range(1,10) + (int)shopScript.repAdd;
          Money = Random.Range(10,100) + (int)shopScript.moneyAdd;
           clone.GetComponent<Image>().color = new Color32(0,255,0,100);
         }
         else {
+            
              clone.GetComponent<Image>().color = new Color32(255,255,0,100);
           
             if (Random.Range(0,2) == 0){
+                clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = badActions[Random.Range(0,badActions.Length-1)];
                 Rep = Random.Range(-10,-1) + (int)shopScript.repAdd;
          Money = Random.Range(10,100) + (int)shopScript.moneyAdd;
 
             }
             else{
+                clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = goodActions[Random.Range(0,goodActions.Length-1)];
                 Rep = Random.Range(1,10) + (int)shopScript.repAdd;
          Money = Random.Range(-100,-1) + (int)shopScript.moneyAdd;
         
@@ -65,7 +71,7 @@ public class CreateOption : MonoBehaviour
         }
        
         
-        clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = "test";
+       
         if (Rep < 0){
             clone.transform.GetChild(1).gameObject.GetComponent<Text>().color = new Color32(255,0,0,255);
         }
