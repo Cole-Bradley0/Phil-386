@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19968498, g: 0.29936957, b: 0.22068766, a: 1}
+  m_IndirectSpecularColor: {r: 0.15468115, g: 0.06722328, b: 0.14837408, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1960,7 +1960,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644442332}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: e9752e42cd61f1040ba856e65c57ead7, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 96f4a5ec01dc83549a7575254f8e528c, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1983,7 +1983,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 1
+  m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -2002,7 +2002,9 @@ MonoBehaviour:
   player: {fileID: 644442337}
   clips:
   - {fileID: 32900000, guid: d8f5592e0c8587c4ba227ce08d040fef, type: 3}
-  - {fileID: 32900000, guid: c35e8304f81bd294dad230a7a6417614, type: 3}
+  - {fileID: 32900000, guid: d618a095b6dadc944be5eb3245ce0e82, type: 3}
+  - {fileID: 32900000, guid: 96f4a5ec01dc83549a7575254f8e528c, type: 3}
+  badPressClip: {fileID: 32900000, guid: c35e8304f81bd294dad230a7a6417614, type: 3}
   cooldown: 0
 --- !u!1 &660548712
 GameObject:
@@ -3090,7 +3092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1268997.2, y: 748202.5}
+  m_AnchoredPosition: {x: -1607497.5, y: 950083.06}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1034621920
