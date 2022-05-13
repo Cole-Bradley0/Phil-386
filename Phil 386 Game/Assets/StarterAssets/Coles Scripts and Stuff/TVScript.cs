@@ -29,7 +29,8 @@ public class TV_Service : MonoBehaviour
     void PlayRandomClip()
     {
         cooldown = true;
-        player.clip = clips[Random.Range(0, clips.Length)];
+        
+        player.clip = clips[Random.Range(0, 2)];
         player.Play();
         StartCoroutine(CooldownTimer());
     }

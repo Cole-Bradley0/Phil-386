@@ -2003,6 +2003,7 @@ MonoBehaviour:
   clips:
   - {fileID: 32900000, guid: d8f5592e0c8587c4ba227ce08d040fef, type: 3}
   - {fileID: 32900000, guid: c35e8304f81bd294dad230a7a6417614, type: 3}
+  - {fileID: 32900000, guid: 73afcacc493e9c4469e3b9e008fd2529, type: 3}
   cooldown: 0
 --- !u!1 &660548712
 GameObject:
@@ -3090,7 +3091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1268997.2, y: 748202.5}
+  m_AnchoredPosition: {x: -1290988.9, y: 758892.44}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1034621920
