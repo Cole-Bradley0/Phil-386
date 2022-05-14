@@ -7,6 +7,9 @@ public class CommentHandler : MonoBehaviour
     public Text comment;
     public PlayerStats playerStats;
     public TVScript tv;
+
+    bool introducedBadPress = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,16 +27,21 @@ public class CommentHandler : MonoBehaviour
         string[] neutralComments = {"Well this works... or at least well enough","Needs more orange","I've used better but I've seen worse","Wait this isn't a review for ice cream","Somebody once told me the world was going to roll me...","This isn't an ice cream shop","There is a a lost dog I found looking for it's owner","What is up with the weather lately"};
 
         string[] badComments = {"0 out of 5 this software sucks","I'd have rather stub my toe than buy this again","Was this created over the course of a night","My children could make a better app","About as useful as a square wheel","It crashes more than it runs","Don't tell me this is the best thing program can do","Passing kidney stones is less painful","What was this program supposed to do cause this isn't it","Please take this down, it would do us all a favor"};
-            if (playerStats.Reputation > 180){
-                comment.text = goodComments[Random.Range(0,goodComments.Length-1)];
-            }
-            else if (playerStats.Reputation <= 180 && playerStats.Reputation > 160){
-                comment.text = neutralComments[Random.Range(0,neutralComments.Length-1)];
-            }
-            else {
-                comment.text = badComments[Random.Range(0,badComments.Length-1)];
+
+        if (playerStats.Reputation > 180){
+            comment.text = goodComments[Random.Range(0,goodComments.Length-1)];
+        }
+        else if (playerStats.Reputation <= 180 && playerStats.Reputation > 160){
+            comment.text = neutralComments[Random.Range(0,neutralComments.Length-1)];
+        }
+        else {
+            comment.text = badComments[Random.Range(0,badComments.Length-1)];
+            if (!introducedBadPress)
+            {
                 tv.IntroduceBadPressClip();
+                introducedBadPress = true;
             }
+        }
             
     }
 

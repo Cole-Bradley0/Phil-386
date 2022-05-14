@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19968498, g: 0.29936957, b: 0.22068766, a: 1}
+  m_IndirectSpecularColor: {r: 0.15468115, g: 0.06722328, b: 0.14837408, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3251,7 +3251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3648254.2, y: 2161635.2}
+  m_AnchoredPosition: {x: -6384935.5, y: 3802667.5}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1034621920
@@ -3897,7 +3897,7 @@ MonoBehaviour:
   repAdd: 2
   moneyAdd: 5
   repAddCost: 10
-  devHireCost: 20
+  devHireCost: 80
   playerScript: {fileID: 2070155860}
   playerStats: {fileID: 3454197277912477631}
   uxPR: {fileID: 1113976777}

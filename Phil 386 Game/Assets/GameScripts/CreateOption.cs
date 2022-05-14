@@ -32,7 +32,7 @@ public class CreateOption : MonoBehaviour
         Money = 0;
 
         if (Random.Range(0,4) == 0){
-             clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = perfectActions[Random.Range(0,perfectActions.Length-1)];
+             clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = perfectActions[Random.Range(0,perfectActions.Length)];
             Rep = Random.Range(1,10) + (int)shopScript.repAdd;
          Money = Random.Range(10,100) + (int)shopScript.moneyAdd;
           clone.GetComponent<Image>().color = new Color32(0,255,0,100);
@@ -42,13 +42,13 @@ public class CreateOption : MonoBehaviour
              clone.GetComponent<Image>().color = new Color32(255,255,0,100);
           
             if (Random.Range(0,2) == 0){
-                clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = badActions[Random.Range(0,badActions.Length-1)];
-                Rep = Random.Range(-10,-1) + (int)shopScript.repAdd;
-         Money = Random.Range(10,100) + (int)shopScript.moneyAdd;
+                clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = badActions[Random.Range(0,badActions.Length)];
+                Rep = Random.Range(-60,-10) + (int)shopScript.repAdd;
+         Money = Random.Range(50,140) + (int)shopScript.moneyAdd;
 
             }
             else{
-                clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = goodActions[Random.Range(0,goodActions.Length-1)];
+                clone.transform.GetChild(0).gameObject.GetComponent<Text>().text = goodActions[Random.Range(0,goodActions.Length)];
                 Rep = Random.Range(1,10) + (int)shopScript.repAdd;
          Money = Random.Range(-100,-1) + (int)shopScript.moneyAdd;
         
@@ -102,7 +102,7 @@ public class CreateOption : MonoBehaviour
      
         while (true){
             //for (int i = 0; i < 3; i++) CreateUi();
-           WaitForSeconds wait = new WaitForSeconds(Random.Range(7f,12f));
+           WaitForSeconds wait = new WaitForSeconds(Random.Range(5f,9f));
             
             yield return wait;
              CreateUi();
