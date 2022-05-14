@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class FinalVideo : MonoBehaviour
 {
@@ -18,7 +19,9 @@ public class FinalVideo : MonoBehaviour
     {
         if(!dont && !player.isPlaying)
         {
+            
             StartCoroutine(timer());
+
             dont = true;
         }
     }
@@ -26,7 +29,8 @@ public class FinalVideo : MonoBehaviour
     IEnumerator timer()
 
     {
-        yield return new WaitForSeconds(3f);
-        Application.Quit();
+        yield return new WaitForSeconds(7f);
+        SceneManager.LoadScene(0);
+        
     }
 }

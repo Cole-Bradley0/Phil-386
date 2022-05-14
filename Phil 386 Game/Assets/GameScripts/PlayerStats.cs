@@ -12,10 +12,14 @@ public class PlayerStats : MonoBehaviour
     public Image ReputationGui;
     public int Money;
     public int Reputation;
+    public Text finalR;
+    public Text finalM;
     // Update is called once per frame
     void Update()
     {
         MoneyGui.text = "$"+Money.ToString();
+          finalR.text = "Reputation: "+Reputation;
+                    finalM.text = "Money: "+Money;
         if (Reputation > 200){
             Reputation = 200;
         }

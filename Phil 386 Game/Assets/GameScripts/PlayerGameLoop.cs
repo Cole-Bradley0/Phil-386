@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using StarterAssets;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerGameLoop : MonoBehaviour
 {
     public Canvas GameCanvas;
+    public Canvas ending;
+    public Canvas ending2;
     private bool showGUI;
    
     public Canvas ECanvas;
@@ -21,10 +25,12 @@ public class PlayerGameLoop : MonoBehaviour
     public int actions;
     public int day;
     public Text Day;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        day = 0;
+        day = 5;
         actions = 5;
         showGUI = false;
     }
@@ -32,6 +38,31 @@ public class PlayerGameLoop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+       if (day < 5){
+       
+            ending.enabled = false;
+        
+       }
+       else{
+           ending.enabled = true;
+       }
+                if (Input.GetKeyDown(KeyCode.Space))
+            {
+
+                 if (day >= 5){
+                   
+                     ending2.enabled = true;
+                     
+                     StartCoroutine(timer());
+                     
+            day = 0;
+            
+                
+            }
+            
+        }
+       
         Day.text = "Day: " + day;
         if (actions <= 0)
         {
@@ -89,6 +120,15 @@ public class PlayerGameLoop : MonoBehaviour
 
 
 
+    }
+
+    IEnumerator timer()
+
+    {
+        yield return new WaitForSeconds(7f);
+        SceneManager.LoadScene(2);
+       
+        
     }
     
 }
