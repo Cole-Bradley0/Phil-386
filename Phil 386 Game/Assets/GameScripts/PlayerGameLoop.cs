@@ -30,7 +30,7 @@ public class PlayerGameLoop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        day = 5;
+        day = 0;
         actions = 5;
         showGUI = false;
     }
