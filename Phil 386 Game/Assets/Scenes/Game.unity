@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15468115, g: 0.06722328, b: 0.14837408, a: 1}
+  m_IndirectSpecularColor: {r: 0.19968498, g: 0.29936957, b: 0.22068766, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3092,7 +3092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1775306.4, y: 1048893.8}
+  m_AnchoredPosition: {x: -1864552.5, y: 1099478.2}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1034621920
@@ -9417,6 +9417,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameCanvas: {fileID: 181061705}
   ECanvas: {fileID: 402060617}
+  mouseLookY: {fileID: 1475511527}
+  mouseLookX: {fileID: 3454197277912477633}
+  movement: {fileID: 3454197277912477625}
   ShopCanvas: {fileID: 1133696354}
   raycastScript: {fileID: 7963347163411044032}
   actions: 0

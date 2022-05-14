@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using StarterAssets;
 
 public class PlayerGameLoop : MonoBehaviour
 {
@@ -10,7 +10,9 @@ public class PlayerGameLoop : MonoBehaviour
     private bool showGUI;
    
     public Canvas ECanvas;
-
+    public MouseLook mouseLookY;
+    public MouseLook mouseLookX;
+    public FirstPersonController movement;
 
 
     public Canvas ShopCanvas;
@@ -46,7 +48,9 @@ public class PlayerGameLoop : MonoBehaviour
             showGUI = !showGUI;
             if (showGUI)
             {
-
+                mouseLookY.enabled = false;
+                mouseLookX.enabled = false;
+                movement.enabled = false;
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 switch(raycastScript.tag){
@@ -61,6 +65,9 @@ public class PlayerGameLoop : MonoBehaviour
                 
             } else
             {
+                movement.enabled = true;
+                mouseLookY.enabled = true;
+                mouseLookX.enabled = true;
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 GameCanvas.enabled = false;
@@ -70,6 +77,9 @@ public class PlayerGameLoop : MonoBehaviour
         }
         }else{
               ECanvas.enabled = false;
+              movement.enabled = true;
+                mouseLookY.enabled = true;
+                mouseLookX.enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 GameCanvas.enabled = false;
