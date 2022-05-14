@@ -6,7 +6,10 @@ using UnityEngine.Video;
 public class TV_Service : MonoBehaviour
 {
     public VideoPlayer player;
+    public VideoClip badVid;
     public VideoClip[] clips;
+
+    public PlayerStats stats;
 
     public bool cooldown = false;
 
@@ -23,7 +26,9 @@ public class TV_Service : MonoBehaviour
         }
     }
 
-
+    void playBadClip(){
+        player.clip = badVid;
+    }
 
     [ContextMenu("play")]
     void PlayRandomClip()

@@ -823,6 +823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comment: {fileID: 218166658}
   playerStats: {fileID: 3454197277912477631}
+  tv: {fileID: 644442338}
 --- !u!1 &277436807
 GameObject:
   m_ObjectHideFlags: 0
@@ -3250,7 +3251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3537032.5, y: 2096331.5}
+  m_AnchoredPosition: {x: -3648254.2, y: 2161635.2}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1034621920
@@ -9858,6 +9859,7 @@ MonoBehaviour:
   GameCanvas: {fileID: 181061705}
   ending: {fileID: 1660251958}
   ending2: {fileID: 1666203760}
+  tv: {fileID: 644442338}
   ECanvas: {fileID: 402060617}
   mouseLookY: {fileID: 1475511527}
   mouseLookX: {fileID: 3454197277912477633}

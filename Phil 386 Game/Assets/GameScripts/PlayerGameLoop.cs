@@ -12,7 +12,7 @@ public class PlayerGameLoop : MonoBehaviour
     public Canvas ending;
     public Canvas ending2;
     private bool showGUI;
-   
+    public TVScript tv;
     public Canvas ECanvas;
     public MouseLook mouseLookY;
     public MouseLook mouseLookX;
